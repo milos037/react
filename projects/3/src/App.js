@@ -1,6 +1,6 @@
   import React, { Component } from 'react';
   import Person from './Person/Person'
-  import './App.css';
+  import styles from './App.css';
   // bez  { useState } kada su klase u pitanju
 
   class App extends Component { 
@@ -49,6 +49,9 @@
     render() {
       let persons = null;
 
+      let btnClass = [styles.Button]
+
+
       if (this.state.showPersons) {
         persons = (
             <div>
@@ -65,22 +68,23 @@
             </div>
         );
 
+        btnClass.push(styles.Red)
         
         
       }
 
       const classes = []
       if (this.state.persons.length <=2) {
-        classes.push('red') // classes = ['red']
+        classes.push(styles.red) // classes = ['red']
       }
       if (this.state.persons.length <=1) {
-        classes.push('bold') // classes = ['red bold']
+        classes.push(styles.bold) // classes = ['red bold']
       } 
       return (
-        <div className="App">
+        <div className={styles.App}>
           <h1>Hide and show people <span role="img" aria-label="jsx-a11y/accessible-emoji">😁</span></h1>
           <p className={classes.join(" ")}>Array styling here</p>
-          <button className="button" onClick={this.togglePersonsHandler}>{this.state.showPersons ? 'Hide all people' : 'Show all people'}</button>
+          <button className={btnClass.join(" ")} onClick={this.togglePersonsHandler}>{this.state.showPersons ? 'Hide all people' : 'Show all people'}</button>
           {persons}
         </div>
       );
