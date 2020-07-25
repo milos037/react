@@ -1,0 +1,7 @@
+.UserInput input {
+    border: 3px solid #1a1919aa;
+    background: #ccc;
+    font-weight:  700;
+    padding: 5px 10px;
+    margin: 10px 0;
+}

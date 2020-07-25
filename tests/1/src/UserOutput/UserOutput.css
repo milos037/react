@@ -1,0 +1,18 @@
+.UserOutput {
+    display: flex;
+    justify-content: space-between;
+}
+.UserOutput p {
+    font-weight:  bold;
+    font-size: 22px;
+    word-wrap: break-word;
+    width:  42%;
+    max-width: 42%;
+    border: 1px solid #1a1a1a;
+    padding:  10px;
+}
+.UserOutput p span {
+    color:  #1a1a1a ;
+    display: block;
+    text-align: left;
+}
